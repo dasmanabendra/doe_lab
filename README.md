@@ -12,8 +12,12 @@ factor interactions, and objectives that genuinely compete.
 
 ## Documentation
 
-**[Full reference &rarr; `docs/REFERENCE.md`](docs/REFERENCE.md)** — 17 chapters covering the
-workflow, every statistical method with worked numbers, the implementation, and the test suite.
+**[Read it online &rarr; dasmanabendra.github.io/doe_lab](https://dasmanabendra.github.io/doe_lab/)**
+&nbsp;·&nbsp; [Markdown](docs/REFERENCE.md) &nbsp;·&nbsp; [single-file HTML](docs/index.html)
+
+17 chapters covering the workflow, every statistical method with worked numbers, the
+implementation, and the test suite. The HTML is self-contained — every screenshot is inlined,
+so it opens straight from a local clone with no server.
 
 New to design of experiments? [Chapter 16](docs/REFERENCE.md#16--the-algorithms-in-plain-terms)
 explains every algorithm and term from scratch — Latin hypercube, D-optimal exchange, R²,
