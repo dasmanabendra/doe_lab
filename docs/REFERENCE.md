@@ -31,7 +31,7 @@ database, no browser.
 4. [Designs of experiments](#4--designs-of-experiments)
 5. [The solver library](#5--the-solver-library)
 6. [Factor sensitivity](#6--factor-sensitivity)
-7. [Partial R²](#7--partial-r)
+7. [Partial R²](#ch7)
 8. [Correlation](#8--correlation)
 9. [The design explorer](#9--the-design-explorer)
 10. [Metamodels](#10--metamodels)
@@ -367,7 +367,7 @@ one point.
 > ```
 
 LHS stratifies each factor *independently*. It does not orthogonalize them — a fact that
-returns in [Chapter 7](#7--partial-r), where residual correlation between factor columns
+returns in [Chapter 7](#ch7), where residual correlation between factor columns
 is what makes unique contributions over-count.
 
 ### D-optimal
@@ -560,7 +560,7 @@ exactly.
 >
 > Its strength is ranking. Its weakness is that normalizing divides the model's own R² out
 > *by construction* — a row looks identical whether the fit explains 95% of the response or
-> 4%. That is precisely what [Chapter 7](#7--partial-r) exists to restore.
+> 4%. That is precisely what [Chapter 7](#ch7) exists to restore.
 
 ![The Factor sensitivity tab](images/ui_analyze_sensitivity.png)
 
@@ -610,7 +610,7 @@ min-to-max range. Pale is that column's smallest value, saturated blue its large
 > per column destroys the comparability it was built for. The visible symptom: **every
 > column always contains exactly one pure-white and one full-blue cell**, regardless of
 > whether its values span 0.001–0.9 or 0.24–0.26. A share of 0.15 can appear darker than one
-> of 0.57 in the next column along. The [partial R²](#7--partial-r) table added later uses a
+> of 0.57 in the next column along. The [partial R²](#ch7) table added later uses a
 > fixed 0–1 ramp for exactly this reason; the fix has not been applied back to this tab.
 
 ### The documented blind spot
@@ -645,6 +645,8 @@ Read on its own, the Torque row says RPM (0.410) and Spark_Timing (0.358) domina
 Chapter 7 shows that the model those shares come from explains 24% of Torque.
 
 ---
+
+<a id="ch7"></a>
 
 ## 7 · Partial R²
 
@@ -1670,7 +1672,7 @@ coverage of its own range.
 > LHS guarantees each factor is spread evenly *on its own*. It does **not** guarantee the factors
 > are uncorrelated *with each other*. With 80 runs over 6 factors you can still find pairs
 > correlated at 0.2 by chance — enough to muddle the question "which factor did this?". That is
-> exactly the effect [Chapter 7](#7--partial-r) makes visible as `shared`.
+> exactly the effect [Chapter 7](#ch7) makes visible as `shared`.
 
 #### D-optimal — the best runs for a model you name in advance
 
